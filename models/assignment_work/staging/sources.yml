@@ -1,0 +1,28 @@
+version: 2
+sources:
+  - name: raw
+    description: Raw data loaded from NYC Open Data
+    database: federico-cis9440-baruch
+    schema: nyc_homework_raw_data
+    tables:
+      - name: source_service_requests_homework
+        description: |
+          NYC 311 service requests for Dept of Transportation.
+          One row per service request.
+        columns:
+          - name: unique_key
+            description: Unique ID for the service request
+            data_tests:
+              - not_null
+          - name: created_date
+            description: Date and time the request was created
+          - name: closed_date
+            description: Date and time the request was closed
+          - name: agency
+            description: Agency code
+          - name: agency_name
+            description: Full name of the agency
+          - name: complaint_type
+            description: Type of complaint
+          - name: descriptor
+            description: Further description of the complaint
