@@ -26,3 +26,8 @@ sources:
             description: Type of complaint
           - name: descriptor
             description: Further description of the complaint
+
+      - name: source_nyc_dob_job_apps
+        description: |
+          NYC Dept of Buildings job application filings.
+          One row per job application filing.
